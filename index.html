@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessible Profile Card</title>
+    <!-- Google Fonts for a clean look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Link to the external stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Profile Card Root Container -->
+    <article data-testid="test-profile-card" class="profile-card">
+      <!-- Left Section: Avatar and Social Links -->
+      <aside class="profile-card-aside">
+        <!-- Avatar Image -->
+        <figure>
+          <img
+            data-testid="test-user-avatar"
+            src="https://placehold.co/150x150/6366f1/white?text=A.W."
+            alt="A smiling person with short, dark hair, wearing a blue shirt."
+            class="profile-card-avatar"
+          />
+        </figure>
+
+        <!-- Name (Header) -->
+        <header class="profile-card-header">
+          <h2 data-testid="test-user-name">Alex Weber</h2>
+          <p class="profile-card-subtitle">Frontend Wizard</p>
+        </header>
+
+        <!-- Social Links List -->
+        <nav class="social-links" aria-label="Social media links">
+          <ul data-testid="test-user-social-links">
+            <li>
+              <a
+                data-testid="test-user-social-github"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              >
+                <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    fill-rule="evenodd"
+                    d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                data-testid="test-user-social-linkedin"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                data-testid="test-user-social-twitter"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Twitter"
+              >
+                <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.596-4.788 6.086C6.184 10.033 3.267 8.45 1.348 6.035c-.347.596-.546 1.299-.546 2.062 0 1.583.805 2.983 2.023 3.804-.749-.024-1.453-.23-2.072-.574v.073c0 2.211 1.572 4.053 3.656 4.473-.382.104-.784.159-1.196.159-.294 0-.578-.028-.857-.081.579 1.804 2.263 3.118 4.264 3.156-1.56 1.226-3.525 1.954-5.658 1.954-.368 0-.73-.021-1.086-.063 2.015 1.299 4.406 2.058 6.963 2.058 8.354 0 12.92-6.924 12.92-12.92 0-.197-.004-.393-.013-.587A9.234 9.234 0 0024 4.557z"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Right Section: Details -->
+      <main class="profile-card-main">
+        <!-- Biography -->
+        <section aria-labelledby="bio-heading">
+          <h3 id="bio-heading">About Me</h3>
+          <p data-testid="test-user-bio" class="bio">
+            I am a passionate frontend developer with a love for creating
+            beautiful, intuitive, and accessible user experiences. I believe
+            that good design is not just about aesthetics, but also about making
+            technology usable for everyone. When I'm not coding, I'm probably
+            exploring a new hiking trail or trying out a new recipe.
+          </p>
+        </section>
+
+        <!-- Hobbies and Dislikes -->
+        <div class="lists-container">
+          <!-- Hobbies List -->
+          <section aria-labelledby="hobbies-heading">
+            <h3 id="hobbies-heading">Hobbies</h3>
+            <ul data-testid="test-user-hobbies">
+              <li class="list-item">
+                <span class="list-item-icon list-item-icon-good">✓</span>
+                Hiking & Outdoors
+              </li>
+              <li class="list-item">
+                <span class="list-item-icon list-item-icon-good">✓</span>
+                Cooking
+              </li>
+              <li class="list-item">
+                <span class="list-item-icon list-item-icon-good">✓</span>
+                Reading Sci-Fi
+              </li>
+            </ul>
+          </section>
+
+          <!-- Dislikes List -->
+          <section aria-labelledby="dislikes-heading">
+            <h3 id="dislikes-heading">Dislikes</h3>
+            <ul data-testid="test-user-dislikes">
+              <li class="list-item">
+                <span class="list-item-icon list-item-icon-bad">×</span>
+                Slow Wi-Fi
+              </li>
+              <li class="list-item">
+                <span class="list-item-icon list-item-icon-bad">×</span>
+                Inaccessible Websites
+              </li>
+              <li class="list-item">
+                <span class="list-item-icon list-item-icon-bad">×</span>
+                Unresponsive Design
+              </li>
+            </ul>
+          </section>
+        </div>
+
+        <!-- Current Time -->
+        <footer class="profile-card-footer">
+          <p class="time-label">
+            Current Client Time (ms):
+            <span data-testid="test-user-time" class="time-display"></span>
+          </p>
+        </footer>
+      </main>
+    </article>
+
+    <!-- Link to the external javascript file -->
+    <script src="script.js"></script>
+  </body>
+</html>
